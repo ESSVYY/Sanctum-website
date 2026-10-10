@@ -1,3 +1,4 @@
-import { AdminDemo } from '@/components/admin-demo';
-export const metadata = { title: 'Sanctum AI | Admin Demo' };
-export default function AdminPage() { return <AdminDemo/>; }
+import { redirect } from "next/navigation";
+export default function AdminPage() {
+  redirect("/admin/dashboard");
+}

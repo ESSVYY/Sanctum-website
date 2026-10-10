@@ -21,7 +21,7 @@ try {
   await page.evaluate(() => document.fonts.ready);
   await page.locator('h1').waitFor();
   await page.screenshot({ path: 'docs/previews/home-desktop.png', ...screenshotOptions });
-  await page.goto(`${baseURL}/admin`, { waitUntil: 'networkidle' });
+  await page.goto(`${baseURL}/admin/demo`, { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
   await page.getByRole('heading', { name: 'Overview', exact: true }).waitFor();
   await page.screenshot({ path: 'docs/previews/admin-desktop.png', ...screenshotOptions, fullPage: true });
